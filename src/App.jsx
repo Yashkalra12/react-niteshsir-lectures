@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 
 function App() {
-  const [luckyNumber, setLuckyNumber] = useState("yash");
+  return (
+    <div>
+      <Namewithbutton />
+      <StaticLine />
+    </div>
+  );
+}
+
+function Namewithbutton() {
+  const [luckyNumber, setLuckyNumber] = useState(null);
 
   const generateLuckyNumber = () => {
-    const randomNumber = Math.floor(Math.random() * 100) + 1; // Generates a random number between 1 and 100
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
     setLuckyNumber(randomNumber);
   };
 
   return (
     <div>
-      <LuckyNumber luckyNumber={luckyNumber} />
-      <MyName />
       <button onClick={generateLuckyNumber}>Generate Lucky Number</button>
+      <LuckyNumber luckyNumber={luckyNumber} />
+      
     </div>
   );
 }
@@ -21,11 +30,12 @@ function LuckyNumber({ luckyNumber }) {
   return <p>My lucky number is {luckyNumber}</p>;
 }
 
-function MyName() {
-  return <p>My name is Yash Kalra</p>;
+function StaticLine() {
+  return <p>This line doesn't need to be re-rendered</p>;
 }
 
 export default App;
+
 
 
 // import React, { useEffect, useState } from 'react';
