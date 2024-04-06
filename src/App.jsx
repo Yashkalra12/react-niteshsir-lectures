@@ -19,9 +19,8 @@ function Namewithbutton() {
 
   return (
     <div>
-      <button onClick={generateLuckyNumber}>Generate Lucky Number</button>
+      <button onClick={generateLuckyNumber}>Generate Lucky Numbers</button>
       <LuckyNumber luckyNumber={luckyNumber} />
-      
     </div>
   );
 }
