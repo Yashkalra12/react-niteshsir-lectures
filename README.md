@@ -1,5 +1,1 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite.
-
-# react-niteshsir-lectures
+#React+Vite
